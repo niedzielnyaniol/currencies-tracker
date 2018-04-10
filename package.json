@@ -26,8 +26,15 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
+    "raf": "^3.4.0",
     "react-scripts": "1.1.4",
     "react-test-renderer": "^16.3.1"
+  },
+  "jest": {
+    "browser": true,
+    "setupFiles": [
+      "raf/polyfill"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,8 +45,8 @@
     "lint:fix": "eslint src --fix",
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
-    "snapshot:update": "react-scripts test -u",
-    "jest": "npm run jest",
-    "precommit": "npm run lint && npm run jest"
+    "jest:update": "jest --updateSnapshot --runInBand --no-cache",
+    "jest": "jest --no-cache",
+    "precommit": "npm run lint && jest"
   }
 }
