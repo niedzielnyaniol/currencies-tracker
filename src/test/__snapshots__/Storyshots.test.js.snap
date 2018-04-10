@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots CurrentItem default 1`] = `
+<div
+  className="ui divided items"
+>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        dolar amerykański (USD)
+      </div>
+      <div
+        className="meta"
+      >
+        Add to favourite to follow rates
+      </div>
+    </div>
+    <button
+      className="ui primary button"
+      disabled={undefined}
+      onClick={[Function]}
+      role="button"
+      tabIndex={undefined}
+    >
+      Add to favourites
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots CurrentItem favourite 1`] = `
+<div
+  className="ui divided items"
+>
+  <div
+    className="item"
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        dolar amerykański (USD)
+      </div>
+      <div
+        className="meta"
+      >
+        Bid: PLN3.37 Ask: PLN3.44
+      </div>
+    </div>
+    <button
+      className="ui secondary button"
+      disabled={undefined}
+      onClick={[Function]}
+      role="button"
+      tabIndex={undefined}
+    >
+      Remove from favourites
+    </button>
+  </div>
+</div>
+`;
