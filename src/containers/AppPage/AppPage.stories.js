@@ -53,6 +53,7 @@ storiesOf('AppPage', module)
       favouriteCurrencies={allCurrencies.splice(0, 3)}
       addCurrencyToFavourite={action('addCurrencyToFavourite')}
       removeCurrencyFromFavourites={action('removeCurrencyFromFavourites')}
-      removeAllFavouriteCurrency={action('removeAllFavouriteCurrency')}
+      removeAllFavouriteCurrencies={action('removeAllFavouriteCurrencies')}
+      loadData={action('loadData')}
     />
   ));
