@@ -15,8 +15,7 @@ const CurrencyItem = ({
   currency,
   intl,
   isFavourite,
-  onAddToFavClick,
-  onRemoveFromFavClick,
+  onBtnClick,
 }) => {
   let meta = intl.formatMessage(messages.follow);
 
@@ -32,10 +31,10 @@ const CurrencyItem = ({
       />
       {
         isFavourite ?
-          <Button onClick={onRemoveFromFavClick} secondary>
+          <Button onClick={onBtnClick} secondary>
             {intl.formatMessage(messages.removeFromFav)}
           </Button> :
-          <Button onClick={onAddToFavClick} primary>
+          <Button onClick={onBtnClick} primary>
             {intl.formatMessage(messages.addToFav)}
           </Button>
       }
@@ -49,15 +48,13 @@ CurrencyItem.propTypes = {
   code: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
   intl: intlShape.isRequired,
+  onBtnClick: PropTypes.func.isRequired,
   isFavourite: PropTypes.bool,
-  onAddToFavClick: PropTypes.func,
-  onRemoveFromFavClick: PropTypes.func,
 };
 
 CurrencyItem.defaultProps = {
   isFavourite: false,
-  onAddToFavClick: () => {},
-  onRemoveFromFavClick: () => {},
+  onBtnClick: () => {},
 };
 
 export default injectIntl(CurrencyItem);

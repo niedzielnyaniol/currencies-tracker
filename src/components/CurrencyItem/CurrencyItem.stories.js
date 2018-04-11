@@ -13,7 +13,7 @@ storiesOf('CurrentItem', module)
         code="USD"
         bid={3.3694}
         ask={3.4374}
-        onAddToFavClick={action('onAddToFavClick')}
+        onBtnClick={action('onAddToFavClick')}
       />
     </Item.Group>
   ))
@@ -25,7 +25,7 @@ storiesOf('CurrentItem', module)
         bid={3.3694}
         ask={3.4374}
         isFavourite
-        onRemoveFromFavClick={action('onRemoveFromFavClick')}
+        onBtnClick={action('onRemoveFromFavClick')}
       />
     </Item.Group>
   ));
