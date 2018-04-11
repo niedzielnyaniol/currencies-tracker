@@ -13,6 +13,9 @@ const messages = {
       'app.currencyItem.addToFav': 'Add to favourites',
       'app.currencyItem.removeFromFav': 'Remove from favourites',
       'app.currencyItem.follow': 'Add to favourite to follow rates',
+      'app.appPage.currencies': 'Currenies',
+      'app.appPage.favourites': 'Favourites',
+      'app.appPage.title': 'Currencies Tracker',
     },
 };
 

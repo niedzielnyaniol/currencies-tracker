@@ -24,7 +24,7 @@ const ItemContainer = ({
   onRemoveAll,
 }) => (
   <Card fluid>
-    <Container>
+    <Container isFavourite={areFavourites}>
       <Header size="huge">{title}</Header>
       <Divider />
       <ScrollWrapper>
