@@ -24,7 +24,7 @@ const ItemContainer = ({
   onRemoveAll,
 }) => (
   <Card fluid>
-    <Container isFavourite={areFavourites}>
+    <Container extraBottomPad={!areFavourites || (areFavourites && rates.length <= 1)}>
       <Header size="huge">{title}</Header>
       <Divider />
       <ScrollWrapper>
@@ -42,13 +42,13 @@ const ItemContainer = ({
         </Item.Group>
       </ScrollWrapper>
       {
-        areFavourites && (
+        areFavourites && rates.length > 1 ? (
           <ButtonWrapper>
             <Button onClick={onRemoveAll} color="red">
               {intl.formatMessage(messages.removeAll)}
             </Button>
           </ButtonWrapper>
-        )
+        ) : null
       }
     </Container>
   </Card>

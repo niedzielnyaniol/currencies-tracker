@@ -8,7 +8,7 @@ const ScrollWrapper = styled.div`
 const Container = styled.div`
   padding: 15px 20px;
 
-  ${(props) => !props.isFavourite && css`
+  ${(props) => props.extraBottomPad && css`
     padding-bottom: 51px;
   `};
 `;
