@@ -6,6 +6,90 @@ exports[`Storyshots AppPage default 1`] = `
 </div>
 `;
 
+exports[`Storyshots AppPage loaded 1`] = `
+<div
+  className="sc-ifAKCX gAWOJx"
+>
+  <div
+    className="ui fluid card"
+    href={undefined}
+    onClick={[Function]}
+  >
+    <div
+      className="sc-bZQynM dansgW"
+    >
+      <h1
+        className="ui header"
+      >
+        Currencies Tracker
+      </h1>
+    </div>
+    <div
+      className="sc-bxivhb einIds"
+    >
+      <div
+        className="sc-EHOje fKBFTp"
+      >
+        <div
+          className="ui fluid card"
+          href={undefined}
+          onClick={[Function]}
+        >
+          <div
+            className="sc-bwzfXH SbCMl"
+          >
+            <div
+              className="ui huge header"
+            >
+              Currenies
+            </div>
+            <div
+              className="ui divider"
+            />
+            <div
+              className="sc-bdVaJa fBCwLx"
+            >
+              <div
+                className="ui divided items"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-EHOje fKBFTp"
+      >
+        <div
+          className="ui fluid card"
+          href={undefined}
+          onClick={[Function]}
+        >
+          <div
+            className="sc-bwzfXH SbCMl"
+          >
+            <div
+              className="ui huge header"
+            >
+              Favourites
+            </div>
+            <div
+              className="ui divider"
+            />
+            <div
+              className="sc-bdVaJa fBCwLx"
+            >
+              <div
+                className="ui divided items"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots CurrentItem default 1`] = `
 <div
   className="ui divided items"

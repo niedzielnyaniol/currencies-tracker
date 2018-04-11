@@ -61,9 +61,13 @@ AppPage.propTypes = {
   favouriteCurrencies: PropTypes.arrayOf(rateShape).isRequired,
   intl: intlShape.isRequired,
   loadData: PropTypes.func.isRequired,
-  loaded: PropTypes.bool.isRequired,
   removeAllFavouriteCurrencies: PropTypes.func.isRequired,
   removeCurrencyFromFavourites: PropTypes.func.isRequired,
+  loaded: PropTypes.bool,
+};
+
+AppPage.defaultProps = {
+  loaded: false,
 };
 
 export default injectIntl(AppPage);
