@@ -33,6 +33,7 @@ const ItemContainer = ({
             rates.map((rate) => (
               <CurrencyItem
                 {...rate}
+                key={rate.code}
                 isFavourite={areFavourites}
                 onBtnClick={onRowBtnClick}
               />

@@ -31,10 +31,10 @@ const CurrencyItem = ({
       />
       {
         isFavourite ?
-          <Button onClick={onBtnClick} secondary>
+          <Button onClick={() => onBtnClick(code)} secondary>
             {intl.formatMessage(messages.removeFromFav)}
           </Button> :
-          <Button onClick={onBtnClick} primary>
+          <Button onClick={() => onBtnClick(code)} primary>
             {intl.formatMessage(messages.addToFav)}
           </Button>
       }
@@ -54,7 +54,6 @@ CurrencyItem.propTypes = {
 
 CurrencyItem.defaultProps = {
   isFavourite: false,
-  onBtnClick: () => {},
 };
 
 export default injectIntl(CurrencyItem);

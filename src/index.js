@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { IntlProvider } from 'react-intl';
+import { Provider } from 'react-redux';
 
-import App from './App';
+import store from './store/';
+
+import App from './pages/App';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <IntlProvider locale="en">
-    <App />
-  </IntlProvider>,
+  <Provider store={store}>
+    <IntlProvider locale="en">
+      <App />
+    </IntlProvider>
+  </Provider>,
   document.getElementById('root'),
 );
 
