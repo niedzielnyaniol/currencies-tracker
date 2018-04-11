@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots AppPage default 1`] = `
+<div>
+  wait
+</div>
+`;
+
 exports[`Storyshots CurrentItem default 1`] = `
 <div
   className="ui divided items"
@@ -64,6 +70,509 @@ exports[`Storyshots CurrentItem favourite 1`] = `
     >
       Remove from favourites
     </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ItemContainer default 1`] = `
+<div
+  className="ui fluid card"
+  href={undefined}
+  onClick={[Function]}
+>
+  <div
+    className="sc-bwzfXH SbCMl"
+  >
+    <div
+      className="ui huge header"
+    >
+      Currencies
+    </div>
+    <div
+      className="ui divider"
+    />
+    <div
+      className="sc-bdVaJa fBCwLx"
+    >
+      <div
+        className="ui divided items"
+      >
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              dolar amerykański (USD)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              dolar australijski (AUD)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              dolar kanadyjski (CAD)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              euro (EUR)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              forint (Węgry) (HUF)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              frank szwajcarski (CHF)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              funt szterling (GBP)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              jen (Japonia) (JPY)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              korona czeska (CZK)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              korona duńska (DKK)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              korona norweska (NOK)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              korona szwedzka (SEK)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              SDR (MFW) (XDR)
+            </div>
+            <div
+              className="meta"
+            >
+              Add to favourite to follow rates
+            </div>
+          </div>
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Add to favourites
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ItemContainer favourite 1`] = `
+<div
+  className="ui fluid card"
+  href={undefined}
+  onClick={[Function]}
+>
+  <div
+    className="sc-bwzfXH dHhzeP"
+  >
+    <div
+      className="ui huge header"
+    >
+      Favourites
+    </div>
+    <div
+      className="ui divider"
+    />
+    <div
+      className="sc-bdVaJa fBCwLx"
+    >
+      <div
+        className="ui divided items"
+      >
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              dolar amerykański (USD)
+            </div>
+            <div
+              className="meta"
+            >
+              Bid: PLN3.37 Ask: PLN3.44
+            </div>
+          </div>
+          <button
+            className="ui secondary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Remove from favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              dolar australijski (AUD)
+            </div>
+            <div
+              className="meta"
+            >
+              Bid: PLN2.59 Ask: PLN2.64
+            </div>
+          </div>
+          <button
+            className="ui secondary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Remove from favourites
+          </button>
+        </div>
+        <div
+          className="item"
+        >
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              dolar kanadyjski (CAD)
+            </div>
+            <div
+              className="meta"
+            >
+              Bid: PLN2.64 Ask: PLN2.69
+            </div>
+          </div>
+          <button
+            className="ui secondary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Remove from favourites
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat hFhgEw"
+    >
+      <button
+        className="ui red button"
+        disabled={undefined}
+        onClick={[Function]}
+        role="button"
+        tabIndex={undefined}
+      >
+        Remove all
+      </button>
+    </div>
   </div>
 </div>
 `;
