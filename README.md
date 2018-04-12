@@ -12,6 +12,8 @@ Project is using `create-react-app` boilerplate, `semantic-ui` for styling
 * `yarn install`
 * `npm install`
 
+### to start application run `npm start`
+
 ## Tests:
 Project using snapshot tests, run `npm run jest` for running snapshot-testing.
 
