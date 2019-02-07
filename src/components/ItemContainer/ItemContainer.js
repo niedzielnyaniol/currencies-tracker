@@ -19,12 +19,12 @@ const ItemContainer = ({
   title,
   rates,
   intl,
-  areFavourites,
+  areFavorites,
   onRowBtnClick,
   onRemoveAll,
 }) => (
   <Card fluid>
-    <Container extraBottomPad={!areFavourites || (areFavourites && rates.length <= 1)}>
+    <Container extraBottomPad={!areFavorites || (areFavorites && rates.length <= 1)}>
       <Header size="huge">{title}</Header>
       <Divider />
       <ScrollWrapper>
@@ -34,7 +34,7 @@ const ItemContainer = ({
               <CurrencyItem
                 {...rate}
                 key={rate.code}
-                isFavourite={areFavourites}
+                isFavorite={areFavorites}
                 onBtnClick={onRowBtnClick}
               />
             ))
@@ -42,7 +42,7 @@ const ItemContainer = ({
         </Item.Group>
       </ScrollWrapper>
       {
-        areFavourites && rates.length > 1 ? (
+        areFavorites && rates.length > 1 ? (
           <ButtonWrapper>
             <Button onClick={onRemoveAll} color="red">
               {intl.formatMessage(messages.removeAll)}
@@ -59,12 +59,12 @@ ItemContainer.propTypes = {
   rates: PropTypes.arrayOf(rateShape).isRequired,
   title: PropTypes.string.isRequired,
   onRowBtnClick: PropTypes.func.isRequired,
-  areFavourites: PropTypes.bool,
+  areFavorites: PropTypes.bool,
   onRemoveAll: PropTypes.func,
 };
 
 ItemContainer.defaultProps = {
-  areFavourites: false,
+  areFavorites: false,
   onRemoveAll: () => {},
 };
 

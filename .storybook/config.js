@@ -10,11 +10,11 @@ const messages = {
     en: {
       'app.currencyItem.bid': 'Bid',
       'app.currencyItem.ask': 'Ask',
-      'app.currencyItem.addToFav': 'Add to favourites',
-      'app.currencyItem.removeFromFav': 'Remove from favourites',
-      'app.currencyItem.follow': 'Add to favourite to follow rates',
-      'app.appPage.currencies': 'Currenies',
-      'app.appPage.favourites': 'Favourites',
+      'app.currencyItem.addToFav': 'Add to favorites',
+      'app.currencyItem.removeFromFav': 'Remove from favorites',
+      'app.currencyItem.follow': 'Add to favorite to follow rates',
+      'app.appPage.currencies': 'Currencies',
+      'app.appPage.favorites': 'favorites',
       'app.appPage.title': 'Currencies Tracker',
     },
 };

@@ -3,15 +3,15 @@ import { defineMessages } from 'react-intl';
 const messages = defineMessages({
   addToFav: {
     id: 'app.currencyItem.addToFav',
-    defaultMessage: 'Add to favourites',
+    defaultMessage: 'Add to favorites',
   },
   removeFromFav: {
     id: 'app.currencyItem.removeFromFav',
-    defaultMessage: 'Remove from favourites',
+    defaultMessage: 'Remove from favorites',
   },
   follow: {
     id: 'app.currencyItem.follow',
-    defaultMessage: 'Add to favourite to follow rates',
+    defaultMessage: 'Add to favorite to follow rates',
   },
 });
 

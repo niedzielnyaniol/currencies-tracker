@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const ScrollWrapper = styled.div`
-  height: 365px;
+  height: 366px;
   overflow-y: auto;
 `;
 

@@ -1,14 +1,14 @@
 import {
   LOAD_ERROR,
   LOAD_SUCCESS,
-  ADD_TO_FAVOURITES,
-  REMOVE_FROM_FAVOURITES,
-  REMOVE_ALL_FROM_FAVOURITES,
+  ADD_TO_FAVORITES,
+  REMOVE_FROM_FAVORITES,
+  REMOVE_ALL_FROM_FAVORITES,
 } from '../actions/actionTypes';
 
 const initialState = {
   currencies: [],
-  favouriteCurrencies: [],
+  favoriteCurrencies: [],
   loaded: false,
 };
 
@@ -25,56 +25,56 @@ const reducer = (state = initialState, action) => {
         loaded: true,
       };
     }
-    case ADD_TO_FAVOURITES: {
+    case ADD_TO_FAVORITES: {
       const currencies = [...state.currencies];
-      const favouriteCurrencies = [...state.favouriteCurrencies];
+      const favoriteCurrencies = [...state.favoriteCurrencies];
 
-      const favourite = currencies.find((currency) => (
+      const favorite = currencies.find((currency) => (
         currency.code === action.currency
       ));
 
-      const indexToDelete = currencies.indexOf(favourite);
+      const indexToDelete = currencies.indexOf(favorite);
 
       currencies.splice(indexToDelete, 1);
-      favouriteCurrencies.push(favourite);
+      favoriteCurrencies.push(favorite);
 
       return {
         ...state,
         currencies,
-        favouriteCurrencies,
+        favoriteCurrencies,
       };
     }
-    case REMOVE_FROM_FAVOURITES: {
+    case REMOVE_FROM_FAVORITES: {
       const currencies = [...state.currencies];
-      const favouriteCurrencies = [...state.favouriteCurrencies];
+      const favoriteCurrencies = [...state.favoriteCurrencies];
 
-      const deleted = favouriteCurrencies.find((currency) => (
+      const deleted = favoriteCurrencies.find((currency) => (
         currency.code === action.currency
       ));
 
-      const indexToDelete = favouriteCurrencies.indexOf(deleted);
+      const indexToDelete = favoriteCurrencies.indexOf(deleted);
 
-      favouriteCurrencies.splice(indexToDelete, 1);
+      favoriteCurrencies.splice(indexToDelete, 1);
       currencies.unshift(deleted);
 
       return {
         ...state,
         currencies,
-        favouriteCurrencies,
+        favoriteCurrencies,
       };
     }
-    case REMOVE_ALL_FROM_FAVOURITES: {
+    case REMOVE_ALL_FROM_FAVORITES: {
       const currencies = [...state.currencies];
-      const favouriteCurrencies = [...state.favouriteCurrencies];
+      const favoriteCurrencies = [...state.favoriteCurrencies];
 
-      favouriteCurrencies.forEach((currency) => {
+      favoriteCurrencies.forEach((currency) => {
         currencies.unshift(currency);
       });
 
       return {
         ...state,
         currencies,
-        favouriteCurrencies: [],
+        favoriteCurrencies: [],
       };
     }
 

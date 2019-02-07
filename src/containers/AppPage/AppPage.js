@@ -19,13 +19,28 @@ import {
 } from './AppPage.styles';
 
 class AppPage extends React.Component {
-  componentWillMount() {
+  static propTypes = {
+    addCurrencyToFavorite: PropTypes.func.isRequired,
+    currencies: PropTypes.arrayOf(rateShape).isRequired,
+    favoriteCurrencies: PropTypes.arrayOf(rateShape).isRequired,
+    intl: intlShape.isRequired,
+    loadData: PropTypes.func.isRequired,
+    removeAllFavoriteCurrencies: PropTypes.func.isRequired,
+    removeCurrencyFromFavorites: PropTypes.func.isRequired,
+    loaded: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    loaded: false,
+  };
+
+  componentDidMount() {
     this.props.loadData();
   }
 
   render() {
     return (
-      this.props.loaded ?
+      this.props.loaded ? (
         <Container>
           <Card fluid>
             <HeaderWrapper>
@@ -36,38 +51,24 @@ class AppPage extends React.Component {
                 <ItemContainer
                   title={this.props.intl.formatMessage(messages.currencies)}
                   rates={this.props.currencies}
-                  onRowBtnClick={this.props.addCurrencyToFavourite}
+                  onRowBtnClick={this.props.addCurrencyToFavorite}
                 />
               </ItemContainerWrapper>
               <ItemContainerWrapper>
                 <ItemContainer
-                  title={this.props.intl.formatMessage(messages.favourites)}
-                  rates={this.props.favouriteCurrencies}
-                  onRowBtnClick={this.props.removeCurrencyFromFavourites}
-                  onRemoveAll={this.props.removeAllFavouriteCurrencies}
-                  areFavourites
+                  title={this.props.intl.formatMessage(messages.favorites)}
+                  rates={this.props.favoriteCurrencies}
+                  onRowBtnClick={this.props.removeCurrencyFromFavorites}
+                  onRemoveAll={this.props.removeAllFavoriteCurrencies}
+                  areFavorites
                 />
               </ItemContainerWrapper>
             </Content>
           </Card>
-        </Container> : <div>wait</div>
+        </Container>
+      ) : 'Loading...'
     );
   }
 }
-
-AppPage.propTypes = {
-  addCurrencyToFavourite: PropTypes.func.isRequired,
-  currencies: PropTypes.arrayOf(rateShape).isRequired,
-  favouriteCurrencies: PropTypes.arrayOf(rateShape).isRequired,
-  intl: intlShape.isRequired,
-  loadData: PropTypes.func.isRequired,
-  removeAllFavouriteCurrencies: PropTypes.func.isRequired,
-  removeCurrencyFromFavourites: PropTypes.func.isRequired,
-  loaded: PropTypes.bool,
-};
-
-AppPage.defaultProps = {
-  loaded: false,
-};
 
 export default injectIntl(AppPage);

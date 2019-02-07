@@ -50,20 +50,20 @@ storiesOf('AppPage', module)
   .add('default', () => (
     <AppPage
       currencies={allCurrencies.splice(3)}
-      favouriteCurrencies={allCurrencies.splice(0, 3)}
-      addCurrencyToFavourite={action('addCurrencyToFavourite')}
-      removeCurrencyFromFavourites={action('removeCurrencyFromFavourites')}
-      removeAllFavouriteCurrencies={action('removeAllFavouriteCurrencies')}
+      favoriteCurrencies={allCurrencies.splice(0, 3)}
+      addCurrencyToFavorite={action('addCurrencyToFavorite')}
+      removeCurrencyFromFavorites={action('removeCurrencyFromFavorites')}
+      removeAllFavoriteCurrencies={action('removeAllFavoriteCurrencies')}
       loadData={action('loadData')}
     />
   ))
   .add('loaded', () => (
     <AppPage
       currencies={allCurrencies.splice(3)}
-      favouriteCurrencies={allCurrencies.splice(0, 3)}
-      addCurrencyToFavourite={action('addCurrencyToFavourite')}
-      removeCurrencyFromFavourites={action('removeCurrencyFromFavourites')}
-      removeAllFavouriteCurrencies={action('removeAllFavouriteCurrencies')}
+      favoriteCurrencies={allCurrencies.splice(0, 3)}
+      addCurrencyToFavorite={action('addCurrencyToFavorite')}
+      removeCurrencyFromFavorites={action('removeCurrencyFromFavorites')}
+      removeAllFavoriteCurrencies={action('removeAllFavoriteCurrencies')}
       loadData={action('loadData')}
       loaded
     />

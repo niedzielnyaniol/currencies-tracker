@@ -51,15 +51,15 @@ storiesOf('ItemContainer', module)
     <ItemContainer
       title="Currencies"
       rates={allCurrencies}
-      onRowBtnClick={action('onAddToFavourites')}
+      onRowBtnClick={action('onAddToFavorites')}
     />
   ))
-  .add('favourite', () => (
+  .add('favorite', () => (
     <ItemContainer
-      title="Favourites"
+      title="favorites"
       rates={allCurrencies.slice(0, 3)}
-      areFavourites
-      onRowBtnClick={action('onRemoveFromFavourites')}
+      areFavorites
+      onRowBtnClick={action('onRemoveFromFavorites')}
       onRemoveAll={action('onRemoveAll')}
     />
   ));

@@ -2,22 +2,22 @@ import * as actions from './actionTypes';
 
 import ApiManager from '../utils/ApiManager';
 
-export const addCurrencyToFavourite = (currency) => ({
-  type: actions.ADD_TO_FAVOURITES,
+export const addCurrencyToFavorite = (currency) => ({
+  type: actions.ADD_TO_FAVORITES,
   currency,
 });
 
-export const removeCurrencyFromFavourites = (currency) => ({
-  type: actions.REMOVE_FROM_FAVOURITES,
+export const removeCurrencyFromFavorites = (currency) => ({
+  type: actions.REMOVE_FROM_FAVORITES,
   currency,
 });
 
-export const removeAllFavouriteCurrencies = (favouriteCurrencies) => ({
-  type: actions.REMOVE_ALL_FROM_FAVOURITES,
-  currencies: favouriteCurrencies,
+export const removeAllFavoriteCurrencies = (favoriteCurrencies) => ({
+  type: actions.REMOVE_ALL_FROM_FAVORITES,
+  currencies: favoriteCurrencies,
 });
 
-const onLoadSucces = (data) => ({
+const onLoadSuccess = (data) => ({
   type: actions.LOAD_SUCCESS,
   data,
 });
@@ -30,7 +30,7 @@ export const loadData = () => (dispatch) => {
   ApiManager.getData(
     'api/exchangerates/tables/c',
     dispatch,
-    onLoadSucces,
+    onLoadSuccess,
     onLoadError,
   );
 };

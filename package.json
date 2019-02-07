@@ -3,11 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@storybook/addon-actions": "^3.4.0",
-    "@storybook/react": "^3.4.0",
     "axios": "^0.18.0",
-    "babel-core": "^6.26.0",
-    "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-intl": "^2.4.0",
@@ -17,22 +13,28 @@
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.2.0",
     "semantic-ui-react": "^0.79.1",
-    "storybook-addon-intl": "^2.3.0",
     "styled-components": "^3.2.5"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/react": "^3.4.0",
     "@storybook/addon-links": "^3.4.0",
     "@storybook/addon-storyshots": "^3.4.0",
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "babel-loader": "^8.0.5",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
+    "prop-types": "^15.6.1",
     "raf": "^3.4.0",
     "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.3.1"
+    "react-test-renderer": "^16.3.1",
+    "source-map-explorer": "^1.6.0",
+    "storybook-addon-intl": "^2.3.0"
   },
   "jest": {
     "browser": true,
@@ -51,6 +53,7 @@
     "build-storybook": "build-storybook",
     "jest:update": "jest --updateSnapshot --runInBand --no-cache",
     "jest": "jest --no-cache",
-    "precommit": "npm run lint && jest"
+    "precommit": "npm run lint && jest",
+    "analyze": "source-map-explorer build/static/js/main.*"
   }
 }

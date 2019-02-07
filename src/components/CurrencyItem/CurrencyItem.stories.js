@@ -17,14 +17,14 @@ storiesOf('CurrentItem', module)
       />
     </Item.Group>
   ))
-  .add('favourite', () => (
+  .add('favorite', () => (
     <Item.Group divided>
       <CurrentItem
         currency="dolar amerykański"
         code="USD"
         bid={3.3694}
         ask={3.4374}
-        isFavourite
+        isFavorite
         onBtnClick={action('onRemoveFromFavClick')}
       />
     </Item.Group>

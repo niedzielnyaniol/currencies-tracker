@@ -5,7 +5,7 @@ const rateShape = PropTypes.shape({
   bid: PropTypes.number,
   code: PropTypes.string,
   currency: PropTypes.string,
-  isFavourite: PropTypes.bool,
+  isFavorite: PropTypes.bool,
   onAddToFavClick: PropTypes.func,
   onRemoveFromFavClick: PropTypes.func,
 });

@@ -3,11 +3,11 @@ import { defineMessages } from 'react-intl';
 const messages = defineMessages({
   currencies: {
     id: 'app.appPage.currencies',
-    defaultMessage: 'Currenies',
+    defaultMessage: 'Currencies',
   },
-  favourites: {
-    id: 'app.appPage.favourites',
-    defaultMessage: 'Favourites',
+  favorites: {
+    id: 'app.appPage.favorites',
+    defaultMessage: 'favorites',
   },
   title: {
     id: 'app.appPage.title',
