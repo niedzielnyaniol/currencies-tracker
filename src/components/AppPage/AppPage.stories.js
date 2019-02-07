@@ -49,22 +49,37 @@ const allCurrencies = [
 storiesOf('AppPage', module)
   .add('default', () => (
     <AppPage
-      currencies={allCurrencies.splice(3)}
-      favoriteCurrencies={allCurrencies.splice(0, 3)}
+      currencies={allCurrencies}
+      favoriteCurrencies={[]}
       addCurrencyToFavorite={action('addCurrencyToFavorite')}
       removeCurrencyFromFavorites={action('removeCurrencyFromFavorites')}
       removeAllFavoriteCurrencies={action('removeAllFavoriteCurrencies')}
-      loadData={action('loadData')}
     />
   ))
-  .add('loaded', () => (
+  .add('with one favorite', () => (
     <AppPage
-      currencies={allCurrencies.splice(3)}
-      favoriteCurrencies={allCurrencies.splice(0, 3)}
+      currencies={[...allCurrencies].splice(3)}
+      favoriteCurrencies={[...allCurrencies].splice(0, 1)}
       addCurrencyToFavorite={action('addCurrencyToFavorite')}
       removeCurrencyFromFavorites={action('removeCurrencyFromFavorites')}
       removeAllFavoriteCurrencies={action('removeAllFavoriteCurrencies')}
-      loadData={action('loadData')}
-      loaded
+    />
+  ))
+  .add('with more favorites', () => (
+    <AppPage
+      currencies={[...allCurrencies].splice(3)}
+      favoriteCurrencies={[...allCurrencies].splice(0, 3)}
+      addCurrencyToFavorite={action('addCurrencyToFavorite')}
+      removeCurrencyFromFavorites={action('removeCurrencyFromFavorites')}
+      removeAllFavoriteCurrencies={action('removeAllFavoriteCurrencies')}
+    />
+  ))
+  .add('favorites only', () => (
+    <AppPage
+      currencies={[]}
+      favoriteCurrencies={allCurrencies}
+      addCurrencyToFavorite={action('addCurrencyToFavorite')}
+      removeCurrencyFromFavorites={action('removeCurrencyFromFavorites')}
+      removeAllFavoriteCurrencies={action('removeAllFavoriteCurrencies')}
     />
   ));

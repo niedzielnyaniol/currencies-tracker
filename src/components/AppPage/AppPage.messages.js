@@ -7,7 +7,7 @@ const messages = defineMessages({
   },
   favorites: {
     id: 'app.appPage.favorites',
-    defaultMessage: 'favorites',
+    defaultMessage: 'Favorites',
   },
   title: {
     id: 'app.appPage.title',

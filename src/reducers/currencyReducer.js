@@ -1,10 +1,12 @@
-import {
-  LOAD_ERROR,
-  LOAD_SUCCESS,
-  ADD_TO_FAVORITES,
-  REMOVE_FROM_FAVORITES,
-  REMOVE_ALL_FROM_FAVORITES,
-} from '../actions/actionTypes';
+import ApiManager from '../utils/ApiManager';
+
+const actionTypes = {
+  LOAD_SUCCESS: 'LOAD_SUCCESS',
+  LOAD_ERROR: 'LOAD_ERROR',
+  ADD_TO_FAVORITES: 'ADD_TO_FAVORITES',
+  REMOVE_FROM_FAVORITES: 'REMOVE_FROM_FAVORITES',
+  REMOVE_ALL_FROM_FAVORITES: 'REMOVE_ALL_FROM_FAVORITES',
+};
 
 const initialState = {
   currencies: [],
@@ -12,11 +14,13 @@ const initialState = {
   loaded: false,
 };
 
-const reducer = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOAD_ERROR:
+    case actionTypes.LOAD_ERROR: {
       throw new Error('Something went wrong');
-    case LOAD_SUCCESS: {
+    }
+
+    case actionTypes.LOAD_SUCCESS: {
       const currencies = action.data[0].rates;
 
       return {
@@ -25,7 +29,8 @@ const reducer = (state = initialState, action) => {
         loaded: true,
       };
     }
-    case ADD_TO_FAVORITES: {
+
+    case actionTypes.ADD_TO_FAVORITES: {
       const currencies = [...state.currencies];
       const favoriteCurrencies = [...state.favoriteCurrencies];
 
@@ -44,7 +49,8 @@ const reducer = (state = initialState, action) => {
         favoriteCurrencies,
       };
     }
-    case REMOVE_FROM_FAVORITES: {
+
+    case actionTypes.REMOVE_FROM_FAVORITES: {
       const currencies = [...state.currencies];
       const favoriteCurrencies = [...state.favoriteCurrencies];
 
@@ -63,7 +69,8 @@ const reducer = (state = initialState, action) => {
         favoriteCurrencies,
       };
     }
-    case REMOVE_ALL_FROM_FAVORITES: {
+
+    case actionTypes.REMOVE_ALL_FROM_FAVORITES: {
       const currencies = [...state.currencies];
       const favoriteCurrencies = [...state.favoriteCurrencies];
 
@@ -83,4 +90,35 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export const addCurrencyToFavorite = (currency) => ({
+  type: actionTypes.ADD_TO_FAVORITES,
+  currency,
+});
+
+export const removeCurrencyFromFavorites = (currency) => ({
+  type: actionTypes.REMOVE_FROM_FAVORITES,
+  currency,
+});
+
+export const removeAllFavoriteCurrencies = (favoriteCurrencies) => ({
+  type: actionTypes.REMOVE_ALL_FROM_FAVORITES,
+  currencies: favoriteCurrencies,
+});
+
+const onLoadSuccess = (data) => ({
+  type: actionTypes.LOAD_SUCCESS,
+  data,
+});
+
+const onLoadError = () => ({
+  type: actionTypes.LOAD_ERROR,
+});
+
+export const loadData = () => (dispatch) => {
+  ApiManager.getData(
+    'api/exchangerates/tables/c',
+    dispatch,
+    onLoadSuccess,
+    onLoadError,
+  );
+};
