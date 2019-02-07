@@ -1,4 +1,4 @@
-import ApiManager from '../utils/ApiManager';
+import ApiManager from '../../utils/ApiManager';
 
 const actionTypes = {
   LOAD_SUCCESS: 'LOAD_SUCCESS',

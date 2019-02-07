@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import AppPage from '../components/AppPage';
+import AppPage from '../../components/AppPage';
 
 import {
   addCurrencyToFavorite,
   loadData,
   removeAllFavoriteCurrencies,
   removeCurrencyFromFavorites,
-} from '../reducers/currencyReducer';
+} from './appReducer';
 
 class App extends React.Component {
   componentDidMount() {
