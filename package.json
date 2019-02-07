@@ -53,7 +53,6 @@
     "build-storybook": "build-storybook",
     "jest:update": "jest --updateSnapshot --runInBand --no-cache",
     "jest": "jest --no-cache",
-    "precommit": "npm run lint && jest",
     "analyze": "source-map-explorer build/static/js/main.*"
   }
 }
